@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Zusatzmaterial">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Zusatzmaterial/blueJ-projects.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Zusatzmaterial/oop_maven_template_jdk25-6.0.0.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Set_UP">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Set_UP/oop_maven_template_jdk25-6.0.0.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Set_UP/jdk-25.0.2_doc-all.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Set_UP/apache-maven-3.9.12-bin.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

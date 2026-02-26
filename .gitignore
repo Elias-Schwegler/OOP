@@ -1,0 +1,17 @@
+# Large binary files (GitHub 100MB limit)
+*.exe
+*.msi
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+*.class
+target/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# PDF images (extracted slides - can be regenerated)
+_pdf_images/
