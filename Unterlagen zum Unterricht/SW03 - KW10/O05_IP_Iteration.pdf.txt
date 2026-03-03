@@ -1,0 +1,307 @@
+Objektorientierte Programmierung
+Iterationen
+Wiederholungen mit Schleifen
+Roland Gisler
+Inhalt
+Was sind Iterationen – Einführung
+Schleife mit Eintrittstest: while
+Schleife mit Austrittstest: do-while
+for-Schleife
+foreach-Schleife
+Empfehlungen und Hinweise
+Zusammenfassung
+2
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+Lernziele
+Sie kennen die verschiedenen Schleifen-Typen von Java mit ihren individuellen 
+Eigenschaften.
+Sie können für die jeweilige Situation den geeigneten Schleifentyp auswählen und 
+implementieren.
+Sie sind in der Lage, sichere Abbruchbedingungen zu Formulieren.
+3
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+Iterationen (Schleifen) - Einführung
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+4
+Einführung - Iterationen
+Viele Aufgaben sind repetitiver (wiederholender) Natur:
+- Eine Menge von Objekten bearbeiten / einlesen / ausgeben.
+- In (zeitlichen) Intervallen bestimmte Aufgaben wiederholen.
+Dafür sind Computer prädestiniert (vgl. "Arbeitstier")!
+Die Umsetzung solcher Wiederholungen nennt man Iteration oder auch einfach 
+(Programm-)Schleife.
+Im Normalfall wird eine Schleife nicht endlos, sondern abhängig von einer logischen 
+Bedingung ausgeführt.
+Man unterscheidet grundlegend zwischen Schleifenkonstrukten
+- mit Eingangs- oder Ausgangstest.
+- mit bekannter oder unbekannter Anzahl Iterationen.
+5
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+Einführung Schleifen / Iterationen
+Java kennt drei verschiedene Schleifen-Anweisungen für unterschiedliche Zwecke und 
+Nutzungen:
+-while-Schleife – Schleife mit Eingangstest.
+-do-while-Schleife – Schleife mit Ausgangstest.
+-for-Schleife – Schleife mit Eingangstest.
+Grundsätzlich kann jede Iteration mit jeder Art von Schleife formuliert werden!
+- Die drei Schleifentypen können sich gegenseitig ersetzen.
+- Sogar eine rekursive Lösung ist äquivalent!
+Die wohlüberlegte Auswahl des Schleifentyps erhöht aber einerseits die Lesbarkeit und 
+Verständlichkeit, und reduziert andererseits den Programmieraufwand.
+6
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+while-Schleife
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+7
+while-Schleife: Syntax
+Die Bedingung (expression) muss ein bool’sches Resultat ergeben (analog zur 
+Bedingung bei if-Statements).
+Häufig werden in der Bedingung Variablen genutzt, deren Inhalt innerhalb des 
+Schleifenkörpers verändert wird.
+Evaluiert die Bedingung beim Eintritt in die Schleife bereits auf false, wird der 
+Schleifenkörper nie ausgeführt.
+8
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+while (<expression>) {
+    <statements> // Schleifenkörper:
+                 // Ausführung so lange Bedingung true. 
+}
+while-Schleife: Formal
+Ablauf einer while-Schleife:
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+9
+Struktogramm
+Aktivitätsdiagramm (UML)
+int input = scan.nextInt();
+int summe = 0;
+while (input != 0) {         
+// Bedingung (Expression)
+    summe = summe + input;  
+// Schleifenkörper
+    input = scan.nextInt(); 
+// |
+}
+System.out.println(summe);
+while-Schleife: Beispiel
+Beispiel: "Zahlen von der Konsole (Terminal) einlesen und diese laufend summieren bis 
+die Zahl ‘0’ eingegeben wird."
+10
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+while-Schleife: Vereinfachtes Beispiel
+Das Beispiel von oben lässt sich auch kürzer formulieren:
+Erkenntnis: Bedingungen dürfen auch Zuweisungen enthalten!
+- Eher verpönt, weil schnell mit == (Gleichheit) verwechselt.
+Nebenbei: Verkürzte Schreibweise der Addition (+=).
+Hinweis: Es braucht einiges an Erfahrung, um einen guten Kompromiss zwischen 
+kompaktem Code und trotzdem leichter Verständlichkeit zu erreichen.
+11
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+int input = 0;
+int summe = 0;
+while ((input = scan.nextInt()) != 0) {
+    summe += input;
+}
+System.out.println(summe);
+while-Schleife: Charakteristik
+Die Anzahl Schleifendurchläufe ist in der Regel (mindestens zum Zeitpunkt der 
+Implementation) nicht bekannt,
+- z.B. abhängig von Benutzereingaben, Datenmenge etc.
+Schleifenkörper wird ausgeführt, solange die Bedingung true ist.
+Die Bedingung wir vor jeder weiteren Ausführung des Schleifenkörpers geprüft.
+Da es sich also um eine Schleife mit Eintrittstest handelt, gibt es eventuell keinen 
+Durchlauf des Schleifenkörpers.
+12
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+do-while-Schleife
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+13
+do-while-Schleife: Syntax
+Die Bedingung (expression) muss ein bool’sches Resultat ergeben (analog zur 
+Bedingung bei if-Statements).
+Häufig werden in der Bedingung Variablen genutzt, deren Inhalt innerhalb des 
+Schleifenkörpers verändert werden.
+Vor der ersten Evaluation der Bedingung wird der Schleifenkörper auf jeden Fall 
+einmal ausgeführt!
+14
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+do {
+    <statements> // Schleifenkörper:
+                 // Ausführung so lange wie die Bedingung true. 
+} while (<expression>);
+do-while-Schleife: Formal
+Ablauf einer do-while-Schleife:
+15
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+Struktogramm
+Aktivitätsdiagramm (UML)
+do-while-Schleife: Beispiel – Variante 1
+Beispiel: Mit drei Würfel so lange würfeln bis alle 6 Punkte zeigen.
+Nebenbei: Ist diese Bedingung gut lesbar bzw. leicht verständlich?
+16
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+int tryCount = 0;
+int dice1, dice2, dice3;
+do {
+    dice1 = (int) (Math.random() * 6) + 1;
+    dice2 = (int) (Math.random() * 6) + 1;
+    dice3 = (int) (Math.random() * 6) + 1;
+    tryCount++;
+} while (!((dice1 == 6) && (dice2 == 6) && (dice3 == 6)));
+System.out.println("Required " + tryCount + " tries.");    
+do-while-Schleife: Beispiel – Variante 2
+Bedingung nach dem «Gesetz von De Morgan» umgeformt:
+Definitiv die Bessere, weil viel leichter verständliche Variante!
+Nebenbei: Gäbe es vielleicht noch einfachere Varianten?
+17
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+int tryCount = 0;
+int dice1, dice2, dice3;
+do {
+    dice1 = (int) (Math.random() * 6) + 1;
+    dice2 = (int) (Math.random() * 6) + 1;
+    dice3 = (int) (Math.random() * 6) + 1;
+    tryCount++;
+} while ((dice1 != 6) || (dice2 != 6) || (dice3 != 6));
+System.out.println("Required " + tryCount + " tries.");    
+do-while-Schleife: Charakteristik
+Die Anzahl Schleifendurchläufe ist in der Regel (mindestens zum Zeitpunkt der 
+Implementation) nicht bekannt,
+- z.B. abhängig von Benutzereingaben, Datenmenge etc.
+Schleifenkörper wird ausgeführt, solange die Bedingung true ist.
+Die Bedingung wir erst nach jeder Ausführung des Schleifenkörpers geprüft, somit 
+erfolgt immer mindestens ein Durchlauf!
+18
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+for-Schleife
+19
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+for-Schleife: Syntax
+Die Initialisierung dient zur Deklaration (optional, aber empfohlen) und Initialisierung 
+der Schleifenvariable(n):
+- Diese sind, bei Deklaration an Ort, nur innerhalb des Schleifenblocks sichtbar!
+Die Bedingung muss ein bool’sches Resultat ergeben.
+Die Finalisierung dient zur Veränderung der Schleifenvariable(n).
+Die for-Schleife ist ideal für einfache, zählende Schleifen!
+20
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+for (<initialisierung>; <expression>; <finalisierung>) {
+    <statements> // Schleifenkörper:
+                 // Ausführung so lange wie die Bedingung true. 
+}
+for-Schleife: Formal
+Ablauf einer for-Schleife:
+21
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+Struktogramm
+Aktivitätsdiagramm (UML)
+for-Schleife: Beispiel
+Beispiel: "Ausgabe der Zahlen von 1 bis 10."
+Die for-Schleifen erlauben speziell für einfache, zählende Schleifen eine sehr kompakte 
+und einfache Schreibweise.
+Da die Schleifenvariablen nur innerhalb des Blockes sichtbar sind (scope), können die 
+Bezeichner problemlos wiederverwendet werden.
+22
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+for (int i = 1; i <= 10; i++) {
+    System.out.println("Wert: " + i);
+}
+// Variable i ist ab hier nicht mehr existent!
+for-Schleife: Charakteristik
+Anzahl Schleifendurchläufe bekannt oder im Voraus (eventuell auch erst zur Laufzeit) 
+berechenbar.
+- Schleifensteuerung meist durch eine einfache Zählvariable.
+- Zählvariable(n) nur innerhalb der Schleife sichtbar.
+- Sonst verpönte kurze Namen wie i, j, k etc. sind hier für die Zählvariablen 
+durchaus erlaubt und üblich!
+Schleife mit Eingangstest:
+Es gibt eventuell gar keinen Durchlauf des Schleifenkörpers!
+Sowohl Initialisierung als auch Finalisierung dürfen auch mehrere Anweisungen 
+beinhalten.
+- Spezielle Syntax: Anweisungen dann durch Kommas getrennt!
+Die Finalisierung ist sehr häufig eine einfache Zählanweisung.
+23
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+foreach-Schleife
+24
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+foreach-Schleife – kurzer Ausblick
+Seit Version 5 kennt Java auch eine foreach-Schleife.
+Das ist aber «nur» eine syntaktische Vereinfachung, welche z.B. bei Collections 
+(Datensammlungen) und Arrays eingesetzt werden kann.
+Dafür gibt es in Java aber kein explizites neues Schlüsselwort 
+(wie z.B. foreach in C#), sondern es wird auch for verwendet.
+Beispiel:
+ Werden wir später im Rahmen von Datenstrukturen (ca. SW09) behandeln.
+25
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+for (final Temperatur t : list) {
+    t.doSomething();
+}
+Hinweise zu allen Schleifen
+26
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+Robuste Formulierung der Schleifenbedingung
+Speziell bei Schleifenbedingungen sollte darauf geachtet werden, dass diese robust 
+formuliert werden, denn tritt eine Bedingung nicht ein, resultiert eine Endlos-Schleife!
+Wenn möglich somit nicht auf absolute Werte (z.B. x == 10) vergleichen, sondern 
+auf Bereiche (z.B. x >= 10).
+Darauf ist speziell bei Fliesskommatypen (float und double) zu achten, da immer 
+Rundungsfehler auftreten können!
+Beispiel: Statt des erwarteten Resultates 2.0f, könnte durch Rundungsfehler auch 
+1.99999f auch 2.000001f auftreten:
+- Eine Bedingung wie (x == 2.0f) liefert dann aber false!
+- Eine robust implementierte Bedingung wie
+(x >= 1.999999f) liefert hingegen korrekt ein true.
+27
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+Empfehlungen - Verwendung von Schleifen
+In Java sind alle drei Schleifen-Anweisungen gleich mächtig!
+- Grundsätzlich austauschbar. 
+Guter Programmierstil: Ziel ist einfache und gute Verständlichkeit:
+- Fallabhängig die adäquate Schleifen-Anweisung wählen.
+- Schleifen-Rumpf immer als Block {…} implementieren, auch im Falle einer einzelnen 
+Anweisung (analog if-else).
+- Ggf. grössere (Teil-)Bedingungen in Methoden auslagern.
+Laufzeit beachten: Beim Aufruf von Methoden im Block oder der Bedingung werden 
+diese n-fach ausgeführt!
+- Gegebenenfalls Werte zwischenspeichern (caching).
+Wichtig: Schleifen sollten nicht nur eine korrekte, sondern auch eine robuste 
+Abbruchbedingung besitzen (siehe vorherige Folie)!
+28
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+Zusätzliche Möglichkeiten: break und continue
+break-Anweisung:
+- Innerhalb eines Schleifen-Blocks bewirkt sie das sofortige Beenden der Schleife.
+- Ungeachtet der Schleifenbedingung!
+continue-Anweisung:
+- Innerhalb eines Schleifen-Blocks bewirkt Sie den Sprung an das Ende des 
+Schleifenblockes.
+- Es folgt die sofortige Prüfung der Bedingung, abhängig davon wird die Scheife 
+fortgesetzt oder nicht.
+Hinweis: Sowohl break als auch continue Anweisungen können (und sollten) meist 
+ohne grossen Aufwand mit einem if-Statement ersetzt, und somit vermieden werden.
+ Sehr selten empfohlen, entsprechen quasi einem goto!
+29
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+Ach ja – bitte dran denken…
+Auch wenn im Internet sehr viele danach fragen, und leider  auch immer mehr davon 
+geschrieben wird, ändert das nichts an der Tatsache: 
+Es gibt keine if-Schleife,
+sondern nur if-Abfragen!
+http://if-schleife.de/
+30
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+Zusammenfassung
+Schleifen mit Eingangstest: while und for
+Schleife mit Ausgangstest: do-while
+for Schleife vorwiegend für zählende Schleifen, sehr kompakt.
+Bei Bedingungen auf Bereiche (statt absoluter Werte) prüfen, damit bei unerwarteten 
+Fehlern trotzdem ein Abbruch, und keine Endlosschleife resultiert!
+- bei Ganzahlen, aber speziell auch bei Fliesskommatypen.
+Bei Schleifen mit vielen Durchläufen darauf achten, dass alle Aktivitäten (in Bedingung, 
+Finalisierung und Schleifenkörper) nicht unnötig Ressourcen verschwenden Laufzeit!
+break und continue Anweisungen wenn möglich vermeiden!
+31
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler - V1.8.1
+Fragen?
+32

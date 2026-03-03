@@ -1,0 +1,99 @@
+Objektorientierte Programmierung (OOP)
+Übungsbesprechungen
+Organisation und Ablauf FS26
+Roland Gisler
+Aktueller Blick auf den Semesterplan
+2
+Aktuelle Version siehe ILIAS  Informationen zum Modul
+ 
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler
+Schedule der Übungsblöcke
+Für die Besprechung der Übungen der Vorwoche (!) werden die Übungsblöcke ab 
+sofort in zwei Teile strukturiert:
+1. Teil:  Einzelbesprechungen mit Dozierenden gemäss Plan.
+-
+Die Einzelbesprechungen finden vor Ort statt!
+-
+Dauer ca. 10-15 Minuten pro Studierenden.
+-
+Restliche Studierende arbeiten selbstständig an den Übungen.
+2. Teil:  Übungspräsentationen und Besprechung im Plenum.
+-
+Letzte Stunde im jeweiligen Block, mit Streaming (Zoom):
+Block 2 (Montag und Freitag): ab 14:10
+-
+Wegen eventuellen Online-Teilnehmenden beginnen die Plenumsbesprechungen 
+immer sehr pünktlich!
+Restliche Zeit:  Individuelles Coaching nach Bedarf.
+3
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler
+Vorbereitung der Einzelbesprechungen
+Für den Lernerfolg des Modules müssen Sie ohnehin alle Aufgaben selbstständig 
+bearbeiten. Darum haben Sie für die Besprechungen eigentlich keinen Zusatzaufwand, 
+ausser:
+Wenn Sie wissen, dass Sie «im Schedule» sind, denken Sie sich bitte vorbereitend 
+wieder in die Aufgabe ein, damit Sie Ihren eigenen Code sofort verstehen und 
+erklären können!
+Die Einzelbesprechungen finden immer physisch vor Ort statt!
+Die Teilnahme an den zwei geplanten Besprechungen sind zwei (von vier) 
+Testatkriterien, welche Sie zur Teilnahme an der Modulendprüfungen berechtigen.
+Es gibt keine Bewertung der Lösung - es ist keine Prüfung.
+4
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler
+Übungspräsentation und Diskussion im Plenum
+Keine Slide-Show! Sondern Notizen und meistens Quellcode.
+Sie zeigen und erläutern uns Ihre Ergebnisse und Erkenntnisse.
+- Direkt als Quellcode (Editor, BlueJ oder IDE), ggf. Skizzen und Diagramme (auch von 
+Hand «auf Papier» völlig ok).
+Wir schauen uns das gemeinsam an und Diskutieren die verschiedenen Lösung.
+- Keine «Kontrolle» und keine «Prüfung», sondern eine konstruktive 
+Auseinandersetzung mit Ihrer Lösung(-svariante).
+- Wertschätzen Sie Ihre Mitstudierenden, seien Sie aufmerksam, machen 
+Sie aktiv mit, stellen Sie Fragen!
+Auswahl der Präsentierenden erfolgt ad-hoc anhand von Kriterien, die wir bei der 
+Besprechung entdecken.
+- Hinweis: Nicht alle werden die Gelegenheit zur Präsentation bekommen. 
+5
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler
+Einzelbesprechungen - Organisation der Termine
+Die Besprechungspläne, getrennt nach Kursen finden Sie auf dem ILIAS, siehe: 
+OOP  Information zum Modul (ab 2. März)
+- Besprechungsplan Kurs 1 (Montag, Block 2)
+- Besprechungsplan Kurs 2 (Freitag, Block 2)
+Prüfen Sie Ihre Termine und tragen Sie diese sofort in Ihren Kalender ein. Wenn ein 
+Termin nicht passt, organisieren Sie einen Abtausch mit einem anderen Studierenden 
+und informieren sie Roland Gisler (MV, roland.gisler@hslu.ch) per Mail.
+Sollten Sie an einem Besprechungstermin unerwartet und kurzfristig verhindert sein, 
+informieren Sie uns bitte ebenfalls sofort per Mail.
+- Ersatztermin wird dann geplant (Default: Folgewoche).
+- Unentschuldigtes Nichterscheinen: Kein Testat!
+6
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler
+Präsentationen im Plenum: Technik
+Wir sind primär vor Ort, aber zeichnen im hybriden Modus auf.
+- Für Studierende, die evt. nur Online anwesend sein können.
+Darum setzen wir für die Präsentationen die Bildschirmfreigabe von Zoom ein. Das 
+heisst, die Präsentierenden treten temporär auch der Zoom-Session bei, und können die 
+Präsentation von ihrem Platz aus halten.
+Wichtig: Dabei deaktivieren Sie vor Ort Ihren Ton. Dieser wird über den Raum bzw. 
+vom Dozentenrechner übertragen. Ihre Kamera dürfen Sie aber gerne einschalten!
+Tipp: Ein kurzer Test und ein bisschen Üben mit Zoom schadet sicher nicht! ;-)
+7
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler
+Präsentationen auf Beam – Bitte beachten!!
+Wichtig: Bitte eine grosse, dunkle Schrift auf weissem Grund!
+- Bitte VOR der Präsentation einstellen und vorbereiten.
+Gut :
+Schlecht :
+Wenn Sie einen HDPI-Bildschirm (High-DPI, hochauflösend) haben, geben Sie besser 
+nur ein Fenster bzw. Bildschirm-Bereich frei.
+8
+© 2026 Hochschule Luzern - OOP - FS26 - Roland Gisler
+…
+System.out.println("Das ist problemlos lesbar!");
+…
+…
+System.out.println("Das ist SEHR SCHLECHT lesbar!");
+…
+Fragen?
+9

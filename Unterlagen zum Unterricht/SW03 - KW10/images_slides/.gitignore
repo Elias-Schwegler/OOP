@@ -1,0 +1,10 @@
+# Ignore all extracted slide images
+*.png
+*.jpg
+*.jpeg
+
+# Except the ones referenced in the summary
+!O04_IP_Selektion_slide_06.png
+!O05_IP_Iteration_slide_09.png
+!O05_IP_Iteration_slide_15.png
+!O05_IP_Iteration_slide_21.png
