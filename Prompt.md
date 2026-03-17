@@ -81,8 +81,8 @@ Alle Dateien durchlesen und Inhalte integrieren.
 | SW 01 | KW08 | Objekte und Klassen | Objekte, Klassen, Methoden, Instanzvariablen, BlueJ |
 | SW 02 | KW09 | Objektinteraktion | Klassendefinitionen, Felder, Konstruktoren, Methoden, Parameter |
 | SW 03 | KW10 | Objektsammlungen | Gruppierung, Sammlungen, Schleifen, Iteratoren, Arrays |
-| SW 04 | KW11 | Bibliotheksklassen | Dokumentation lesen, Java-Bibliothek, Pakete, Map |
-| SW 05 | KW12 | Testen und Debugging | Unit-Tests, JUnit, Debugging-Strategien, Testautomatisierung |
+| SW 04 | KW11 | Schnittstellen & Datenkapselung | Interfaces, abstrakte Klassen, Zugriffsmodifizierer, Information Hiding |
+| SW 05 | KW12 | Vererbung & Entwicklungsumgebung | Vererbung, extends, super, Subtyping, Ersetzbarkeit, Polymorphe Variablen, IDE |
 | SW 06 | KW13 | Entwurf von Klassen | Kopplung, Kohäsion, Kapselung, Verantwortlichkeiten, Refactoring |
 | SW 07 | KW14 | Vererbung | Superklassen, Subklassen, Vererbungshierarchien, Überschreiben |
 | SW 08 | KW15 | Polymorphismus | Dynamische Typen, Überschreiben, Polymorphe Methodenaufrufe |
@@ -143,8 +143,7 @@ OOP/
 ## Hinweise für den Agent
 
 - Zuerst den **SW-Ordner** der aktuellen Woche im Pfad `Unterlagen zum Unterricht/` auslesen
-- **PDFs** direkt lesen (Kapitel = Theorie, O-PDFs = Inputs, U-PDFs = Übungen)
-- **ZIP-Dateien** entpacken und Java-Quellcode lesen (BlueJ-Projekte)
+- **ZIP-Dateien** entpacken (`Expand-Archive` in PowerShell) und Java-Quellcode lesen (BlueJ-Projekte)
 - **Musterlösungen** (solution.zip) bevorzugt für Code-Beispiele verwenden
 - ZUSAMMENFASSUNG aus vorherigen Wochen lesen für **Querverweise**
 - Bei Wochen ohne Solution-ZIP: Code-Beispiele aus den Kapitel-PDFs extrahieren
@@ -152,3 +151,57 @@ OOP/
 - **UML-Diagramme** aus den Kapitel-PDFs als Mermaid-Diagramme nachbauen
 - **Prüfungsrelevanz:** Die MEP ist eine Programmierprüfung → Fokus auf lauffähigen, korrekten Java-Code und Refactoring-Fähigkeiten
 - **Java-Version:** JDK 25 (gemäss OOP_JavaDevelopmentManual_jdk25.pdf)
+
+### 📄 PDF-Lesevorgang (WICHTIG!)
+
+`view_file` kann **keine PDFs** lesen und der **Browser kann keine lokalen Datei-URLs** öffnen. Stattdessen **PyMuPDF** (`fitz`) verwenden, das bereits installiert ist:
+
+#### Schritt 1: Text aus PDFs extrahieren
+```python
+python -c "
+import fitz
+import os
+os.makedirs(r'C:\tmp\pdf_text', exist_ok=True)
+pdfs = {
+    'name': r'Pfad\zur\Datei.pdf',
+}
+for name, path in pdfs.items():
+    doc = fitz.open(path)
+    text = ''
+    for i, page in enumerate(doc):
+        text += f'=== PAGE {i+1} ===\n{page.get_text()}\n'
+    with open(os.path.join(r'C:\tmp\pdf_text', f'{name}.txt'), 'w', encoding='utf-8') as f:
+        f.write(text)
+    print(f'{name}: {len(doc)} pages')
+    doc.close()
+"
+```
+→ Dann die `.txt`-Dateien mit `view_file` lesen.
+
+#### Schritt 2: PDF-Seiten als Bilder extrahieren (für Diagramme/UML)
+```python
+python -c "
+import fitz
+import os
+os.makedirs(r'C:\tmp\pdf_images', exist_ok=True)
+pdfs = {
+    'name': r'Pfad\zur\Datei.pdf',
+}
+for name, path in pdfs.items():
+    doc = fitz.open(path)
+    for i, page in enumerate(doc):
+        pix = page.get_pixmap(dpi=200)
+        pix.save(os.path.join(r'C:\tmp\pdf_images', f'{name}_page{i+1:02d}.png'))
+    print(f'{name}: {len(doc)} pages converted')
+    doc.close()
+"
+```
+→ Dann die `.png`-Dateien mit `view_file` ansehen (UML-Diagramme, Code-Listings, Abbildungen).
+
+#### Workflow-Zusammenfassung:
+1. **Alle PDFs im SW-Ordner identifizieren** (via `list_dir`)
+2. **Text extrahieren** (PyMuPDF → `.txt` in `C:\tmp`)
+3. **Bilder extrahieren** (PyMuPDF → `.png` in `C:\tmp`) für Diagramme
+4. **ZIPs entpacken** (`Expand-Archive`) und `.java`-Dateien mit `view_file` lesen
+5. **Vorherige Zusammenfassungen lesen** für Querverweise
+6. **Zusammenfassung schreiben** als `ZUSAMMENFASSUNG_SWXX.md`
