@@ -5,13 +5,20 @@ public class Presentation {
 
     public static void main(String[] args) {
         System.out.println("=========================================");
-        System.out.println("HSLU OOP Praesentation: SW03 - SW09");
+        System.out.println("HSLU OOP Praesentation: SW03 - SW10");
         System.out.println("=========================================\n");
 
         runSw03();
         runSw04();
         runSw08();
         runSw09();
+        runSw10();
+    }
+
+    private static void runSw10() {
+        System.out.println(">>> STARTING SW10 DEMO (Exception Handling) <<<\n");
+        sw10.Sw10Demo.main(new String[]{});
+        System.out.println("\n>>> SW10 END <<<\n");
     }
 
     private static void runSw03() {
