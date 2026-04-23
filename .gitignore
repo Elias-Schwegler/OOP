@@ -13,3 +13,9 @@ Thumbs.db
 .idea/
 .vscode/
 *.iml
+
+# Set_UP (Installer-Dateien: JDK, Maven, BlueJ - zu gross fuer git)
+Set_UP/
+
+# BlueJ generated files
+*.ctxt
