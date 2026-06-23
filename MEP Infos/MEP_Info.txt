@@ -1,64 +1,88 @@
-Alle Angebote
-ILIAS HSLU
-Magazin  Informatik  Ausbildung  2026  I.BA_OOP.F26  MEP Informationen
+═══════════════════════════════════════════════════════════════════════════
+ OOP FS26 - MEP (Modulendprüfung) - Übersicht
+ Stand: 2026-05-26 (aktualisiert aus ILIAS)
+═══════════════════════════════════════════════════════════════════════════
 
-MEP Informationen
-Informationen zur Modulendprüfung (wird laufend ergänzt).
-Reiter
- Ebene hoch
-Inhalt
-(Ausgewählt)
-Info
-Termin
-Die OOP Modulendprüfung findet am ???, den ??. ??? 2026 von ?:?? - ?:?? vor Ort in Rotkreuz statt.
+TERMIN
+------
+Mittwoch, 24. Juni 2026, 13:30 - 15:30 Uhr
+Ort: Rotkreuz, Raum S1A.??? (pendent, siehe InfoScreens)
 
-Räume
-Raum S1A.??? und S1A.???
-Durchführung
-Die OOP MEP wird als elektronische Prüfung (Programmierung in der IDE auf dem eigenen Rechner) mit elektronischer Abgabe über ILIAS durchgeführt.
 
-Wichtige Hinweise:
+DURCHFÜHRUNG
+------------
+- Elektronische Prüfung, Programmierung in der IDE auf dem eigenen Rechner
+- Elektronische Abgabe über ILIAS
+- Open-Book: alle Unterlagen lokal erlaubt
+- Internet erlaubt für JavaDoc / Recherche
+- 7 Aufgaben total (ehemals 5, jetzt mit Bonus-Aufgaben 7)
+- Eine Aufgabe wird mehrfach abgegeben (digitale Abgabe testen)
+- Prüfungsdauer: 120 Minuten -> 1 Minute = 1 Punkt (Faustregel)
 
-Auch bei einer "open-book"-Prüfung ist die seriöse Vorbereitung für eine genügende Note essenziell wichtig.
-Die besten Quellen sind die Inputs und Ihre selber gelösten Übungen!
-Sie müssen die Grundlagen verstanden und präsent haben. Während der Prüfung haben Sie zu wenig Zeit um grundlegende Recherchen zu betreiben.
-Der Lösungsweg ist ein wesentlicher Bestandteil der Prüfung. So wird die Codeerstellung und die Überarbeitung (Refactoring)  mit Zwischenabgaben ebenfalls bewertet.
-Sie tragen die Verantwortung für Ihre funktionierende Programmierumgebung und Ihre WLAN-Verbindung.
-Für Ihren Rechner sind Sie selber verantwortlich! Es stehen keine Ersatzgeräte zur Verfügung.
-Erlaubte Hilfsmittel
-Es handelt sich um eine "open-book"-Prüfung, das heisst Sie dürfen alle Unterlagen (Inputs, Lehrbücher, Ihre Übungslösungen etc.) als Hilfsmittel verwenden. Halten Sie diese lokal vor!
-Der Zugriff auf das Internet für Recherche, JavaDoc etc. ist erlaubt.
-Nicht erlaubt:
 
-Jegliche interaktive Kommunikation über Chat, Foren, Mail, Filesharing-Dienste etc. und mit Dritten oder künstlicher Intelligenz ist untersagt!
-Der Einsatz von lokal installierten LLMs / KIs ist ebenfalls untersagt.
-Als Entwicklungsumgebungen sind nur Netbeans, IntelliJ IDEA, Eclipse, Visual Studio Code oder VSCodium und ohne KI-Funktionen (sind zu deaktivieren) und KI-spezifische Plugins erlaubt.
-Empfehlung: NetBeans - ist ohne zusätzliche Plugins garantiert KI-Frei. Bei allen anderen IDEs sind sie selber verantwortlich, besonders IntelliJ IDEA ist teilweise sehr aggressiv, beachten Sie dazu auch: Restrict and Disable AI Assistant in IntelliJ IDEA 2025.3
-Vorbereitung und Test-Abgabe
-Der Stoffumgang umfasst sämliche Inputs und Übungen. Eine Zusammenfassung aller Lernziele finden Sie in der Stoffabgrenzung (PDF) (pendent).
+NICHT ERLAUBT
+-------------
+- Jegliche Kommunikation (Chat, Foren, Mail, Filesharing) mit Dritten
+- Künstliche Intelligenz / LLMs (auch lokal installierte)
+- KI-Plugins in IDEs (müssen deaktiviert werden)
 
-Prüfen Sie Ihre Umgebung (Login HSLU-Netzwerk, Zugriff auf ILIAS etc.) im Vorfeld unbedingt vor Ort!
-Sie sind für Ihre Infrastruktur selber verantwortlich! Es stehen keine Ersatzgeräte zur Verfügung.
-Es ist eine begrenzte Anzahl Steckdosen verfügbar, laden Sie Ihren Akku im Vorfeld vollständig.
-Sie sind selber für eine funktionierende Programmierumgebung und eine stabile Internetverbindung verantwortlich.
-Ab Ende Semester können Sie die Abgabe (pendent) testen:
-Anleitung zur Abgabe (PDF) (pendent)
-Spezielles Projekttemplate (ZIP) (pendent) für die MEP OOP.
-Bei Problemen melden Sie sich im Forum.
-Ablauf der Prüfung
-Sie werden die Aufgabenstellung in ausgedrucker Form erhalten und am Schluss der Prüfung unterschrieben wieder abgeben.
-Sie benötigen neben dem Computer und Schreibzeug keine weitere Infrastruktur.
-Wir verzichten bewusst auf Smartphone, Tablets oder andere Zusatzgeräte (z.B. Zweitbildschirm).
-Weniger Ablenkung, identische Voraussetzungen für alle, Rücksicht auf Platzverhältnisse.
-Alle weitere Informationen erhalten Sie vor Ort bei Antritt zur Prüfung.
-Redlichkeit
-Mit der Absolvierung (Abgabe) der Prüfung bestätigen Sie, dass Sie:
+Erlaubte IDEs (ohne KI-Funktionen):
+  - NetBeans (empfohlen - garantiert KI-frei)
+  - IntelliJ IDEA (KI aggressiv abschalten, siehe Restrict-PDF)
+  - Eclipse
+  - VS Code / VSCodium
+  -> Bei allen ausser NetBeans selbst verantwortlich für KI-Deaktivierung!
 
-die Prüfungen alleine und ohne unerlaubte Hilfe von Dritten absolviert haben.
-die Lösungen und Resultate selbst hergeleitet haben.
-keine anderen als die ausdrücklich vorgesehenen Hilfsmittel benutzt haben.
-keine unerlaubte interaktive Kommunikation mit Dritten (inkl. KI) während der Prüfung geführt haben.
-Bei Unredlichkeiten gilt der Artikel 39 der Studienordnung für die Ausbildung an der Hochschule Luzern, FH Zentralschweiz (Nr. 521).
 
- powered by ILIAS (v9.8 2025-04-01) 
-Impressum Info Barrierefreiheit Barriere melden 
+TIPPS AUS DEM UNTERRICHT
+------------------------
+- Zuerst die ganze Aufgabenstellung durchlesen, dann erst loslegen
+- Tematischer Schwerpunkt: Schweiz (letztes Jahr: Hochwasser)
+- Nur Programmieraufgaben, kein Ankreuzen
+- JavaDoc kommentieren ggf. 1-2 Punkte
+- Tests + Docs NUR schreiben wenn explizit in Hinweisen erwähnt
+- Gleiches Projekt mehrfach abgeben - Lehrer sieht Diff zwischen Versionen
+- Akku voll laden (begrenzte Steckdosen vor Ort)
+- Login HSLU-Netz + ILIAS vorher vor Ort testen
+- Prüfungen werden individualisiert
+- Übungen 9-13 (optional) waren eine alte Prüfung -> üben!
+
+
+VORBEREITUNGSMATERIAL (in diesem MEP Infos/ Ordner)
+----------------------------------------------------
+- OOP_26FS_MEP_Stoffabgrenzung.pdf       Lernziele aller Inputs zusammengefasst
+- oop-fs26-test-e001-Name.Vorname.pdf    Test-Prüfung + Abgabe-Anleitung
+- oop_exam-26FS-1.0.0.zip                Reduziertes Maven-Template für die MEP
+- MEP_Bundle/oop_exam-26FS-1.0.0/        ^ entpackt, direkt benutzbar
+- Restrict or disable AI Assistant...    Anleitung: IntelliJ KI deaktivieren
+- MEP_Notizen_Unterricht.txt             Notizen aus Unterrichtsstunde (Roh)
+
+
+VORAUSSETZUNGEN AN MEINEM SETUP
+-------------------------------
+- Maven >= 3.8.8 (installiert: 3.9.12 -> OK)
+- JDK 25 (installiert -> OK)
+- Eine erlaubte IDE mit deaktivierter KI
+- HSLU-Netzwerk-Login funktioniert
+- ILIAS-Zugriff funktioniert
+
+
+REDLICHKEITS-ERKLÄRUNG (bei Abgabe)
+-----------------------------------
+Mit der Abgabe bestätigst du:
+- Prüfung alleine, ohne unerlaubte Hilfe
+- Lösung selbst hergeleitet
+- Nur erlaubte Hilfsmittel
+- Keine KI-Nutzung während der Prüfung
+Bei Unredlichkeit: Art. 39 Studienordnung HSLU (Nr. 521)
+
+
+═══════════════════════════════════════════════════════════════════════════
+ ABGABE TESTEN (ab Ende Semester)
+═══════════════════════════════════════════════════════════════════════════
+1. Probeaufgaben sind auf ILIAS verfügbar
+2. oop_exam-Template entpacken und testen
+3. Abgabefrist Test-Abgabe: laut ILIAS (siehe MEP_Notizen_Unterricht.txt)
+
+Bei Problemen: ILIAS-Forum
+═══════════════════════════════════════════════════════════════════════════
