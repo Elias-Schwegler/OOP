@@ -19,3 +19,12 @@ Set_UP/
 
 # BlueJ generated files
 *.ctxt
+
+# Redundante Kursmaterial-ZIPs (Inhalt liegt jeweils entpackt vor)
+Unterlagen zum Unterricht/**/*.zip
+MEP Infos/**/*.zip
+
+# Buch-Beispiel-Audio (Blues-Samples aus OFWJ-Kapitel, nutzlos fuer OOP)
+**/audio/*.mp3
+**/audio/*.wav
+**/audio/*.ogg
